@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>LIBRARY</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: left;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+      table thead {
+        background-color: #ff9800;
+        color: #ff9800;
+        font-weight: bold;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-top: 1px solid #fff;
+        border-bottom: 3px solid #000000;
+        font-size: 20px;
+      }
+      table td {
+        background-color: #fff;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold;
+      }
+      .button {
+        width: 200px;
+        hight: 100%;
+        cursor: pointer;
+        outline: 0;
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        color: #0d6efd;
+        border-color: #0d6efd;
+      }
+
+      .button:hover {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+
+      .topnav {
+        color: #ff9800;
+        margin: 10px;
+      }
+      input[type="text"] {
+        width: 40%;
+        border: 2px solid blue;
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type="text"]:focus {
+        background-color: #fafaff;
+      }
+      input[type="submit"] {
+        width: 150px;
+        hight: 100%;
+        background-color: #62529c;
+        border: none;
+        color: #fff;
+        padding: 15px 30px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      input[type="submit"]:hover {
+        width: 150px;
+        hight: 100%;
+        background: #016abc;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #eee;
+        text-shadow: none;
+      }
+      .delete {
+        cursor: pointer;
+        outline: 0;
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        color: #ff0000;
+        border-color: #ff0000;
+      }
+
+      .delete:hover {
+        color: #fff;
+        background-color: #ff0000;
+        border-color: #000000;
+      }
+
+      .header {
+        text-align: left;
+        color: green;
+        font-size: 30px;
+        font-family: serif;
+        margin-left: 50px;
+      }
+      .topic {
+        text-align: center;
+        color: Black;
+        font-size: 70px;
+        text-shadow: 1px 1px 4px rgba(50, 43, 128, 1);
+      }
+      select {
+        border-radius: 0.4rem;
+        border: 3px solid transparent;
+        border-color: #ff9800;
+        background-color: white;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        z-index: 1;
+      }
+      label {
+        text-align: left;
+        color: #ff9800;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .form {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="topic">LIBRARY SYSTEM</h1>
+    </div>
+
+    {% block content %} {% endblock content %}
+  </body>
+</html>

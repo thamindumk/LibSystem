@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<div class="topnav">
+  <form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+
+    <select id="select" name="select">
+      <option value="title">Title</option>
+      <option value="genre">Genre</option>
+    </select>
+
+    <input
+      type="text"
+      id="search"
+      name="search"
+      placeholder="Type to search..."
+    />
+    <input type="submit" value="Search" />
+  </form>
+</div>
+<div style="padding: 10px; hight: 200px; float: right">
+  <form method="get" action="{% url 'add' %}">
+    <button class="button">ADD A BOOK</button>
+  </form>
+</div>
+<table>
+  <thead>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Genre</td>
+    <td>Hight</td>
+    <td>Publisher</td>
+  </thead>
+  <tbody>
+    {% for book in books %}
+    <tr>
+      {% for key,value in book.items %}
+      <td>{{value}}</td>
+      {%endfor%}
+      <td>
+        <form action="{% url 'delete' forloop.counter %}" method="post">
+          {% csrf_token %}
+          <button class="delete">DELETE</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
